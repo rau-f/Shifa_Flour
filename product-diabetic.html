@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifa Diabetic Flour - Product Details</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Urdu Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/product-diabetic.css">
+</head>
+
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button class="lang-btn active" id="englishBtn">English</button>
+        <button class="lang-btn" id="urduBtn">اردو</button>
+    </div>
+
+    <!-- Header with Fixed Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <!-- Replace with your logo -->
+                    <img src="assets/logo1.png" alt="Shifa Diabetic Flour Logo" style="height: 140%; width: auto;">                </div>
+                <div class="logo-text">
+                    <h1 class="translatable" data-urdu="شفاء ذیابیطس آٹا">Shifa Diabetic Flour</h1>
+                    <p class="translatable" data-urdu="قدرتی کھائیں، صحت مند رہیں">Eat Natural, Live Healthy</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="translatable" data-urdu="ہوم">Home</a></li>
+                    <!-- <li><a href="#product" class="translatable" data-urdu="پروڈکٹ">Product</a></li> -->
+                    <li><a href="#ingredients" class="translatable" data-urdu="اجزاء">Ingredients</a></li>
+                    <li><a href="#benefits" class="translatable" data-urdu="فوائد">Benefits</a></li>
+                    <li><a href="#contact" class="translatable" data-urdu="رابطہ">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                    <li><a href="index.html" class="translatable" data-urdu="ہوم">Home</a></li>
+                    <!-- <li><a href="#product" class="translatable" data-urdu="پروڈکٹ">Product</a></li> -->
+                    <li><a href="#ingredients" class="translatable" data-urdu="اجزاء">Ingredients</a></li>
+                    <li><a href="#benefits" class="translatable" data-urdu="فوائد">Benefits</a></li>
+                    <li><a href="#contact" class="translatable" data-urdu="رابطہ">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Hero -->
+    <section class="product-hero" id="product">
+        <div class="container">
+            <div class="product-grid">
+                <div class="product-image">
+                    <!-- Replace with product image -->
+                    <img src="assets/diabetic/flour.jpeg" alt="Shifa Diabetic Flour">
+                </div>
+                
+                <div class="product-info">
+                    <span class="product-badge translatable" data-urdu="100% قدرتی">100% Natural</span>
+                    <h1 class="product-title translatable" data-urdu="شفاء ذیابیطس آٹا">Shifa Diabetic Flour</h1>
+                    <p class="product-tagline translatable fade-in" data-urdu="ایک سائنسی طور پر تیار کردہ ملٹی گرین فارمولا جو خون میں شوگر کی سطح کو کنٹرول کرنے، ہاضمے کو بہتر بنانے اور مستقل توانائی فراہم کرنے کے لیے ڈیزائن کیا گیا ہے۔">A scientifically blended multigrain formula specially designed to support healthy blood sugar levels, improve digestion, and provide sustained energy.</p>
+                    
+                    <div class="product-highlights fade-in">
+                        <p class="translatable" data-urdu="✔ خون میں شوگر کو کنٹرول کرتا ہے"><i class="fas fa-check" style="color: var(--secondary-green);"></i> Supports Sugar Control</p>
+                        <p class="translatable" data-urdu="✔ ہاضمے کو بہتر بناتا ہے"><i class="fas fa-check" style="color: var(--secondary-green);"></i> Improves Digestion</p>
+                        <p class="translatable" data-urdu="✔ دل کی صحت کے لیے مفید"><i class="fas fa-check" style="color: var(--secondary-green);"></i> Heart-Friendly Formula</p>
+                    </div>
+                    
+                    <a href="https://wa.me/923291515630?text=Hello%20Shifa%20Diabetic%20Flour%21%20I%20have%20a%20question%20about%20your%20product."
+                       class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="translatable" data-urdu="ابھی آرڈر کریں">Order Now on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="کلیدی خصوصیات">Key Features</h2>
+                <p class="translatable" data-urdu="ہماری خصوصیات جو ہمارے آٹے کو منفرد بناتی ہیں">What makes our flour special</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="100% قدرتی اجزاء">100% Natural Ingredients</h3>
+                    <p class="translatable" data-urdu="کوئی مصنوعی اضافے یا محافظ نہیں">No preservatives or artificial additives</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line-down"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="کم گلیسیمک اثر">Low Glycemic Impact</h3>
+                    <p class="translatable" data-urdu="گلوکوز جذب کو آہستہ کرنے کے لیے تیار">Specially formulated to slow glucose absorption</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="ہائی فائبر مکس">High-Fiber Blend</h3>
+                    <p class="translatable" data-urdu="آنتوں کی صحت کو بہتر بناتا ہے">Promotes gut health and aids digestion</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="اومگا 3 سے بھرپور">Rich in Omega-3</h3>
+                    <p class="translatable" data-urdu="دل کی صحت کے لیے السی کے بیج">Contains flaxseed to support heart health</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients -->
+    <section class="ingredients-section" id="ingredients">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="قدرتی اجزاء">Natural Ingredients</h2>
+                <p class="translatable" data-urdu="15 انتہائی مفید اجزاء کا بہترین امتزاج">A perfect blend of 15 highly beneficial ingredients</p>
+            </div>
+            
+            <div class="ingredients-grid">
+                <!-- 1. Wheat -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e8d8b6, #d4b483);">
+                        <i class="fas fa-wheat-awn" style="font-size: 4rem; color: #8b6b4c;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="گندم">Wheat</h3>
+                        <!-- <p class="urdu-name">(گندم)</p> -->
+                        <p class="translatable" data-urdu="قدرتی فائبر اور توانائی کا ذریعہ">Source of natural fiber and energy</p>
+                    </div>
+                </div>
+                
+                <!-- 2. Barley -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e8e8b6, #d4d483);">
+                        <i class="fas fa-seedling" style="font-size: 4rem; color: #8b8b4c;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="جو">Barley</h3>
+                        <!-- <p class="urdu-name">(جو)</p> -->
+                        <p class="translatable" data-urdu="شوگر کنٹرول کے لیے بہترین">Excellent for blood sugar control</p>
+                    </div>
+                </div>
+                
+                <!-- 3. Bajra (Pearl Millet) -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e0d4b6, #c4a873);">
+                        <i class="fas fa-grain" style="font-size: 4rem; color: #735c3c;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="باجرہ">Bajra</h3>
+                        <!-- <p class="urdu-name">(باجرہ)</p> -->
+                        <p class="translatable" data-urdu="ہائی فائبر، لو گلیسیمک انڈیکس">High fiber, low glycemic index</p>
+                    </div>
+                </div>
+                
+                <!-- 4. Chickpea Dal -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f4e0b6, #e0c483);">
+                        <i class="fas fa-seedling" style="font-size: 4rem; color: #a67c2e;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="دال چنا">Chickpea Dal</h3>
+                        <!-- <p class="urdu-name">(دال چنا)</p> -->
+                        <p class="translatable" data-urdu="پروٹین اور فائبر سے بھرپور">Rich in protein and fiber</p>
+                    </div>
+                </div>
+                
+                <!-- 5. Corn -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f0e6b6, #f0d04a);">
+                        <i class="fas fa-corn" style="font-size: 4rem; color: #e6b800;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="مکئی">Corn</h3>
+                        <!-- <p class="urdu-name">(مکئی)</p> -->
+                        <p class="translatable" data-urdu="وٹامنز اور اینٹی آکسیڈنٹس">Rich in vitamins and antioxidants</p>
+                    </div>
+                </div>
+                
+                <!-- 6. Wheat Fiber -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f5e9d8, #e6d0b0);">
+                        <i class="fas fa-wheat-alt" style="font-size: 4rem; color: #8b7355;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="گندم کا فائبر">Wheat Fiber</h3>
+                        <!-- <p class="urdu-name">(گندم کا فائبر)</p> -->
+                        <p class="translatable" data-urdu="ہاضمے کے لیے انتہائی مفید">Excellent for digestion</p>
+                    </div>
+                </div>
+                
+                <!-- 7. White Kidney Beans -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f0f0f0, #d9d9d9);">
+                        <i class="fas fa-seedling" style="font-size: 4rem; color: #7d7d7d;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="سفید لوبیا">White Kidney Beans</h3>
+                        <!-- <p class="urdu-name">(سفید لوبیا)</p> -->
+                        <p class="translatable" data-urdu="پروٹین اور معدنیات کا ذریعہ">Source of protein and minerals</p>
+                    </div>
+                </div>
+                
+                <!-- 8. Black Chickpeas -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #4a4a4a, #2d2d2d);">
+                        <i class="fas fa-circle" style="font-size: 4rem; color: #8b7355;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="کالے چنے">Black Chickpeas</h3>
+                        <!-- <p class="urdu-name">(کالے چنے)</p> -->
+                        <p class="translatable" data-urdu="آئرن اور فائبر سے بھرپور">Rich in iron and fiber</p>
+                    </div>
+                </div>
+                
+                <!-- 9. Sorghum -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e8d4b6, #d4b883);">
+                        <i class="fas fa-seedling" style="font-size: 4rem; color: #8b6b4c;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="جوار">Sorghum</h3>
+                        <!-- <p class="urdu-name">(جوار)</p> -->
+                        <p class="translatable" data-urdu="گلوٹین فری، غذائیت سے بھرپور">Gluten-free, nutrient-rich</p>
+                    </div>
+                </div>
+                
+                <!-- 10. Flaxseed -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f0e6d4, #e0d0a8);">
+                        <i class="fas fa-droplet" style="font-size: 4rem; color: #8b7355;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="السی">Flaxseed</h3>
+                        <!-- <p class="urdu-name">(السی)</p> -->
+                        <p class="translatable" data-urdu="اومگا 3 اور دل کی صحت کے لیے">For Omega-3 and heart health</p>
+                    </div>
+                </div>
+                
+                <!-- 11. Fenugreek Seeds -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e8f5e8, #c8e6c8);">
+                        <i class="fas fa-leaf" style="font-size: 4rem; color: #4caf50;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="میتھی دانہ">Fenugreek Seeds</h3>
+                        <!-- <p class="urdu-name">(میتھی دانہ)</p> -->
+                        <p class="translatable" data-urdu="شوگر کنٹرول میں مددگار">Helps in blood sugar control</p>
+                    </div>
+                </div>
+                
+                <!-- 12. Moringa -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #d4e8d4, #a8d0a8);">
+                        <i class="fas fa-tree" style="font-size: 4rem; color: #2d5a27;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="مورنگا">Moringa</h3>
+                        <!-- <p class="urdu-name">(مورنگا)</p> -->
+                        <p class="translatable" data-urdu="اینٹی آکسیڈنٹس کا خزانہ">Treasure of antioxidants</p>
+                    </div>
+                </div>
+                
+                <!-- 13. Fennel -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f0f8e0, #e0f0c0);">
+                        <i class="fas fa-star" style="font-size: 4rem; color: #8bc34a;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="سونف">Fennel</h3>
+                        <!-- <p class="urdu-name">(سونف)</p> -->
+                        <p class="translatable" data-urdu="ہاضمے کے لیے مفید">Beneficial for digestion</p>
+                    </div>
+                </div>
+                
+                <!-- 14. Black Seed (Kalonji) -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #2d2d2d, #1a1a1a);">
+                        <i class="fas fa-seedling" style="font-size: 4rem; color: #666666;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="کلونجی">Black Seed</h3>
+                        <!-- <p class="urdu-name">(کلونجی)</p> -->
+                        <p class="translatable" data-urdu="روایتی علاج کی خصوصیات">Traditional healing properties</p>
+                    </div>
+                </div>
+                
+                <!-- 15. Turmeric -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #ffecb3, #ffd54f);">
+                        <i class="fas fa-root" style="font-size: 4rem; color: #ff8f00;"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="دیسی ہلدی">Turmeric</h3>
+                        <!-- <p class="urdu-name">(دیسی ہلدی)</p> -->
+                        <p class="translatable" data-urdu="اینٹی انفلامیٹری خصوصیات">Anti-inflammatory properties</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add a note about the complete blend -->
+            <div style="text-align: center; margin-top: 40px; padding: 20px; background: var(--light-green); border-radius: 10px;">
+                <h3 class="translatable" data-urdu="15 اجزاء کا مکمل امتزاج">Complete Blend of 15 Ingredients</h3>
+                <p class="translatable" data-urdu="شفاء ذیابیطس آٹا 15 انتہائی مفید اجزاء کا سائنسی امتزاج ہے جو خون میں شوگر کو کنٹرول کرنے، ہاضمہ بہتر بنانے اور قوت مدافعت بڑھانے کے لیے ڈیزائن کیا گیا ہے۔">Shifa Diabetic Flour is a scientific blend of 15 highly beneficial ingredients designed to control blood sugar, improve digestion, and boost immunity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Facts -->
+    <section class="nutrition-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="غذائی حقائق">Nutrition Facts</h2>
+                <p class="translatable" data-urdu="ہر 50 گرام سرونگ کے لیے">Per 50g serving</p>
+            </div>
+            
+            <table class="nutrition-table">
+                <thead>
+                    <tr>
+                        <th class="translatable" data-urdu="غذائی اجزاء">Nutrient</th>
+                        <th class="translatable" data-urdu="مقدار">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="translatable" data-urdu="کیلوریز">Calories</td>
+                        <td>185-205 kcal</td>
+                    </tr>
+                    <tr>
+                        <td class="translatable" data-urdu="کل چکنائی">Total Fat</td>
+                        <td>5.5-7.5 g</td>
+                    </tr>
+                    <tr>
+                        <td class="translatable" data-urdu="کاربوہائیڈریٹس">Carbohydrates</td>
+                        <td>27-31 g</td>
+                    </tr>
+                    <tr>
+                        <td class="translatable" data-urdu="ڈائٹری فائبر">Dietary Fiber</td>
+                        <td>5.5-8.5 g</td>
+                    </tr>
+                    <tr>
+                        <td class="translatable" data-urdu="پروٹین">Protein</td>
+                        <td>5-6.5 g</td>
+                    </tr>
+                    <tr>
+                        <td class="translatable" data-urdu="میگنیشیم">Magnesium</td>
+                        <td>45-70 mg</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="text-align: center; margin-top: 20px; color: var(--text-light);" 
+               class="translatable fade-in" 
+               data-urdu="*مسلسل توانائی اور صحت کے لیے متوازن غذائیت">
+                *A balanced profile for sustained energy and health.
+            </p>
+        </div>
+    </section>
+
+    <!-- Usage & Benefits -->
+    <section class="usage-section" id="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="استعمال اور فوائد">Usage & Benefits</h2>
+            </div>
+            
+            <div class="usage-grid">
+                <div class="usage-card fade-in">
+                    <h3 class="translatable" data-urdu="کس طرح استعمال کریں">How to Use</h3>
+                    <ul class="usage-list">
+                        <li class="translatable" data-urdu="نرم اور غذائیت سے بھرپور روٹی تیار کریں">Prepare soft and nutritious roti</li>
+                        <li class="translatable" data-urdu="پراٹھا، چلا، یا ملٹی گرین دلیہ">Paratha, chilla, or multigrain porridge</li>
+                        <li class="translatable" data-urdu="روزانہ استعمال کے لیے مثالی">Ideal for daily consumption</li>
+                        <li class="translatable" data-urdu="توصیہ شدہ مقدار: 50-80 گرام روزانہ">Recommended: 50-80g per day</li>
+                    </ul>
+                    <p style="margin-top: 20px;" class="translatable" data-urdu="ذخیرہ کرنے کا طریقہ: ہوٹی بند ڈبے میں ٹھنڈی اور خشک جگہ پر رکھیں">
+                        Storage: Store in airtight container in cool, dry place
+                    </p>
+                </div>
+                
+                <div class="usage-card fade-in">
+                    <h3 class="translatable" data-urdu="آئیڈیل کن کے لیے">Ideal For</h3>
+                    <ul class="usage-list">
+                        <li class="translatable" data-urdu="ذیابیطس کے مریض">Diabetic patients</li>
+                        <li class="translatable" data-urdu="وزن کم کرنے والے افراد">Weight-conscious individuals</li>
+                        <li class="translatable" data-urdu="دل کے مریض">Heart patients</li>
+                        <li class="translatable" data-urdu="فٹنس کے شوقین">Fitness enthusiasts</li>
+                        <li class="translatable" data-urdu="صحت مند طرز زندگی چاہنے والے خاندان">Families seeking healthier lifestyle</li>
+                    </ul>
+                </div>
+                
+                <div class="usage-card fade-in">
+                    <h3 class="translatable" data-urdu="صحت کے فوائد">Health Benefits</h3>
+                    <ul class="usage-list">
+                        <li class="translatable" data-urdu="شوگر کنٹرول میں مددگار">Supports blood sugar control</li>
+                        <li class="translatable" data-urdu="ہاضمہ بہتر کرتا ہے">Improves digestion</li>
+                        <li class="translatable" data-urdu="دل کی صحت کے لیے مفید">Heart-friendly formula</li>
+                        <li class="translatable" data-urdu="توانائی کی سطح بڑھاتا ہے">Boosts energy levels</li>
+                        <li class="translatable" data-urdu="وزن کے انتظام میں مددگار">Aids weight management</li>
+                        <li class="translatable" data-urdu="قوت مدافعت بڑھاتا ہے">Strengthens immunity</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/9232227709220?text=Hello%20Shifa%20Diabetic%20Flour%21%20I%20have%20questions%20about%20using%20your%20flour." 
+                   class="whatsapp-btn" target="_blank">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="translatable" data-urdu="سوالات پوچھیں">Ask Questions</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 class="translatable" data-urdu="شفاء ذیابیطس آٹا">Shifa Diabetic Flour</h3>
+                    <p class="translatable" data-urdu="آپ کی صحت مند زندگی کا سفر شفاء سے شروع ہوتا ہے">Your wellness journey begins with Shifa</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="translatable" data-urdu="رابطہ کریں">Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-user"></i> M Nawaz Raza</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:03227709220" style="color: white;">0322-7709220</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p class="translatable" data-urdu="© 2023 شفاء ذیابیطس آٹا۔ جملہ حقوق محفوظ ہیں۔ قدرتی صحت کی طرف ایک قدم">© 2023 Shifa Diabetic Flour. All rights reserved. | A Step Towards Natural Wellness</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/product-diabetic.js"></script>
+</body>
+</html>

@@ -1,0 +1,673 @@
+/* CSS Variables */
+:root {
+    --primary-green: #2d5a27;
+    --secondary-green: #3e7c3a;
+    --light-green: #e8f5e8;
+    --accent-gold: #d4af37;
+    --earth-brown: #8b6b4c;
+    --cream: #f5f1e8;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+/* Urdu Font Class */
+.urdu-text {
+    font-family: 'Jameel Noori Nastaleeq Kasheeda', serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--cream);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Language Toggle */
+.language-toggle {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 1000;
+    background: white;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    display: flex;
+    overflow: hidden;
+    border: 2px solid var(--secondary-green);
+}
+
+.lang-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 100px;
+    text-align: center;
+}
+
+.lang-btn.active {
+    background: var(--secondary-green);
+    color: white;
+}
+
+.lang-btn:not(.active):hover {
+    background: var(--light-green);
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo-text h1 {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    margin-bottom: 5px;
+}
+
+.logo-text p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: var(--transition);
+}
+
+.desktop-nav a:hover {
+    color: var(--secondary-green);
+}
+
+.desktop-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-green);
+    transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    cursor: pointer;
+    z-index: 1001;
+    transition: var(--transition);
+}
+
+.mobile-menu-btn:hover {
+    color: var(--secondary-green);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 999;
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav li {
+    margin: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav a:hover {
+    background-color: var(--light-green);
+    color: var(--secondary-green);
+    padding-left: 40px;
+}
+
+.mobile-nav a:last-child {
+    border-bottom: none;
+}
+
+/* Product Hero - Family Flour Special */
+.product-hero {
+    background: linear-gradient(135deg, #f8f3e8, rgba(255,255,255,0.9));
+    padding: 150px 0 80px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') no-repeat center/cover;
+    opacity: 0.15;
+}
+
+.product-hero .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.product-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: var(--transition);
+}
+
+.product-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-badge {
+    display: inline-block;
+    background: var(--earth-brown);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.product-title {
+    font-size: 3rem;
+    color: var(--earth-brown);
+    margin-bottom: 20px;
+}
+
+.product-tagline {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* Family Mission Section */
+.family-mission {
+    background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.mission-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mission-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.mission-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Features Grid */
+.features-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--earth-brown);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-gold);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--cream);
+    padding: 30px;
+    border-radius: 15px;
+    transition: var(--transition);
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--earth-brown);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--earth-brown);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: var(--earth-brown);
+}
+
+/* Ingredients Grid for Family Flour */
+.ingredients-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--cream), var(--white));
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.ingredient-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.ingredient-card:hover {
+    transform: translateY(-10px);
+}
+
+.ingredient-image {
+    height: 180px;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingredient-image i {
+    font-size: 3.5rem;
+    color: var(--earth-brown);
+}
+
+.ingredient-content {
+    padding: 20px;
+}
+
+.ingredient-content h3 {
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.urdu-name {
+    font-size: 1rem;
+    color: var(--earth-brown);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Benefits for All Ages */
+.benefits-section {
+    padding: 80px 0;
+    background: var(--light-green);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--earth-brown);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    color: var(--earth-brown);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefit-card ul {
+    list-style: none;
+}
+
+.benefit-card li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.benefit-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-green);
+    font-weight: bold;
+}
+
+/* Ideal For Section */
+.ideal-for-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.ideal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.ideal-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: var(--cream);
+    transition: var(--transition);
+}
+
+.ideal-card:hover {
+    background: var(--light-green);
+    transform: translateY(-5px);
+}
+
+.ideal-icon {
+    font-size: 2.5rem;
+    color: var(--earth-brown);
+    margin-bottom: 20px;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: 30px;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: var(--earth-brown);
+    color: var(--white);
+    padding: 70px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .product-hero .product-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .product-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hide desktop nav, show mobile menu button */
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .product-title {
+        font-size: 2.5rem;
+    }
+    
+    .mission-box h2 {
+        font-size: 2rem;
+    }
+    
+    .language-toggle {
+        top: 90px;
+        right: 10px;
+    }
+    
+    .lang-btn {
+        min-width: 80px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-title {
+        font-size: 2rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .mission-box {
+        padding: 20px;
+    }
+    
+    .mission-box h2 {
+        font-size: 1.8rem;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo-img {
+        height: 50px;
+    }
+    
+    .language-toggle {
+        top: 80px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Family Special Styling */
+.family-highlight {
+    color: var(--earth-brown);
+    font-weight: 600;
+}

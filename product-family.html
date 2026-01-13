@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifa Family Flour - Natural Family Nutrition</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Urdu Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/product-family.css">
+</head>
+
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button class="lang-btn active" id="englishBtn">English</button>
+        <button class="lang-btn" id="urduBtn">اردو</button>
+    </div>
+
+    <!-- Header with Fixed Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <!-- Replace with your logo -->
+                    <img src="assets/logo1.png" alt="Shifa Logo" style="height: 140%; width: auto;">
+                </div>
+                <div class="logo-text">
+                    <h1 class="translatable" data-urdu="شفاء فیملی آٹا">Shifa Family Flour</h1>
+                    <p class="translatable" data-urdu="ہر گھر کے لیے صحت کا تحفہ">Health for Every Home</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="translatable" data-urdu="ہوم">Home</a></li>
+                    <!-- <li><a href="#product" class="translatable" data-urdu="پروڈکٹ">Product</a></li> -->
+                    <li><a href="#features" class="translatable" data-urdu="خصوصیات">Features</a></li>
+                    <li><a href="#benefits" class="translatable" data-urdu="فوائد">Benefits</a></li>
+                    <li><a href="#contact" class="translatable" data-urdu="رابطہ">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                    <li><a href="index.html" class="translatable" data-urdu="ہوم">Home</a></li>
+                    <!-- <li><a href="#product" class="translatable" data-urdu="پروڈکٹ">Product</a></li> -->
+                    <li><a href="#features" class="translatable" data-urdu="خصوصیات">Features</a></li>
+                    <li><a href="#benefits" class="translatable" data-urdu="فوائد">Benefits</a></li>
+                    <li><a href="#contact" class="translatable" data-urdu="رابطہ">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Hero -->
+    <section class="product-hero" id="product">
+        <div class="container">
+            <div class="product-grid">
+                <div class="product-image">
+                    <!-- Replace with product image -->
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Shifa Family Flour">
+                </div>
+                
+                <div class="product-info">
+                    <span class="product-badge translatable" data-urdu="ہر گھر کے لیے">For Every Home</span>
+                    <h1 class="product-title translatable" data-urdu="شفاء فیملی آٹا">Shifa Family Flour</h1>
+                    <p class="product-tagline translatable fade-in" data-urdu="مہربان دسترخوان — قدرت، غذائیت اور اعتماد کا امتزاج۔ صرف آٹا نہیں — ایک مکمل صحت مند طرزِ زندگی">A compassionate dining table — A blend of nature, nutrition, and trust. Not just flour — a complete healthy lifestyle.</p>
+                    
+                    <div class="product-highlights fade-in">
+                        <p class="translatable" data-urdu="✔ پورے خاندان کے لیے موزوں"><i class="fas fa-check" style="color: var(--earth-brown);"></i> Suitable for Whole Family</p>
+                        <p class="translatable" data-urdu="✔ متوازن غذائیت"><i class="fas fa-check" style="color: var(--earth-brown);"></i> Balanced Nutrition</p>
+                        <p class="translatable" data-urdu="✔ روزمرہ استعمال کے لیے"><i class="fas fa-check" style="color: var(--earth-brown);"></i> For Daily Use</p>
+                    </div>
+                    
+                    <a href="https://wa.me/923291515630?text=Hello%20Shifa%20Family%20Flour%21%20I%20have%20a%20question%20about%20your%20product."
+                       class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="translatable" data-urdu="خاندان کے لیے آرڈر کریں">Order for Family</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Mission -->
+    <section class="family-mission">
+        <div class="container">
+            <div class="mission-box fade-in">
+                <h2 class="translatable" data-urdu="ہمارا مشن">Our Mission</h2>
+                <p class="translatable" data-urdu="ہر گھر کی روزمرہ روٹی کو صحت کا ذریعہ بنانا۔ شفا فیملی آٹا 15 قدرتی اناج کا متوازن امتزاج ہے جو جدید نیوٹریشن کے اصولوں پر تیار کیا گیا ہے۔">To transform daily bread into a source of health for every home. Shifa Family Flour is a balanced blend of 15 natural grains developed on modern nutrition principles.</p>
+                <p class="translatable" data-urdu="تاکہ ہر نوالہ صحت، توانائی اور اطمینان دے۔">So that every bite gives health, energy, and satisfaction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="خصوصی فوائد">Key Features</h2>
+                <p class="translatable" data-urdu="روزمرہ کی روٹی میں صحت کا امتزاج">Health blended into daily bread</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="دل کی صحت">Heart Health</h3>
+                    <p class="translatable" data-urdu="متوازن غذائیت جو دل کی صحت کے لیے مفید ہے">Balanced nutrition beneficial for heart health</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-digestion"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="بہتر ہاضمہ">Better Digestion</h3>
+                    <p class="translatable" data-urdu="ہائی فائبر جو ہاضمے کو بہتر بناتی ہے">High fiber that improves digestion</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="توانائی میں اضافہ">Energy Boost</h3>
+                    <p class="translatable" data-urdu="قدرتی پروٹین سے جسمانی طاقت میں اضافہ">Natural protein increases physical strength</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="سب عمر گروپ کے لیے">For All Ages</h3>
+                    <p class="translatable" data-urdu="بچوں، بڑوں اور بزرگوں سب کے لیے موزوں">Suitable for children, adults, and elders</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients -->
+    <section class="ingredients-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="قدرتی اجزاء">Natural Ingredients</h2>
+                <p class="translatable" data-urdu="15 صحت بخش اناج کا امتزاج">Blend of 15 healthy grains</p>
+            </div>
+            
+            <div class="ingredients-grid">
+                <!-- Wheat -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e8d8b6, #d4b483);">
+                        <i class="fas fa-wheat-awn"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="گندم">Wheat</h3>
+                        <p class="urdu-name">(گندم)</p>
+                    </div>
+                </div>
+                
+                <!-- Barley -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e8e8b6, #d4d483);">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="جو">Barley</h3>
+                        <p class="urdu-name">(جو)</p>
+                    </div>
+                </div>
+                
+                <!-- Bajra -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e0d4b6, #c4a873);">
+                        <i class="fas fa-grain"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="باجرہ">Bajra</h3>
+                        <p class="urdu-name">(باجرہ)</p>
+                    </div>
+                </div>
+                
+                <!-- Chickpea Dal -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f4e0b6, #e0c483);">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="دال چنا">Chickpea Dal</h3>
+                        <p class="urdu-name">(دال چنا)</p>
+                    </div>
+                </div>
+                
+                <!-- Corn -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f0e6b6, #f0d04a);">
+                        <i class="fas fa-corn"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="مکئی">Corn</h3>
+                        <p class="urdu-name">(مکئی)</p>
+                    </div>
+                </div>
+                
+                <!-- Wheat Fiber -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f5e9d8, #e6d0b0);">
+                        <i class="fas fa-wheat-alt"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="گندم کا فائبر">Wheat Fiber</h3>
+                        <p class="urdu-name">(گندم کا فائبر)</p>
+                    </div>
+                </div>
+                
+                <!-- White Kidney Beans -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f0f0f0, #d9d9d9);">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="سفید لوبیا">White Kidney Beans</h3>
+                        <p class="urdu-name">(سفید لوبیا)</p>
+                    </div>
+                </div>
+                
+                <!-- Black Chickpeas -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #4a4a4a, #2d2d2d);">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="کالے چنے">Black Chickpeas</h3>
+                        <p class="urdu-name">(کالے چنے)</p>
+                    </div>
+                </div>
+                
+                <!-- Sorghum -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e8d4b6, #d4b883);">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="جوار">Sorghum</h3>
+                        <p class="urdu-name">(جوار)</p>
+                    </div>
+                </div>
+                
+                <!-- Flaxseed -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f0e6d4, #e0d0a8);">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="السی">Flaxseed</h3>
+                        <p class="urdu-name">(السی)</p>
+                    </div>
+                </div>
+                
+                <!-- Fenugreek Seeds -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #e8f5e8, #c8e6c8);">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="میتھی دانہ">Fenugreek Seeds</h3>
+                        <p class="urdu-name">(میتھی دانہ)</p>
+                    </div>
+                </div>
+                
+                <!-- Moringa -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #d4e8d4, #a8d0a8);">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="مورنگا">Moringa</h3>
+                        <p class="urdu-name">(مورنگا)</p>
+                    </div>
+                </div>
+                
+                <!-- Fennel -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #f0f8e0, #e0f0c0);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="سونف">Fennel</h3>
+                        <p class="urdu-name">(سونف)</p>
+                    </div>
+                </div>
+                
+                <!-- Black Seed -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #2d2d2d, #1a1a1a);">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="کلونجی">Black Seed</h3>
+                        <p class="urdu-name">(کلونجی)</p>
+                    </div>
+                </div>
+                
+                <!-- Turmeric -->
+                <div class="ingredient-card fade-in">
+                    <div class="ingredient-image" style="background: linear-gradient(135deg, #ffecb3, #ffd54f);">
+                        <i class="fas fa-root"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 class="translatable" data-urdu="دیسی ہلدی">Turmeric</h3>
+                        <p class="urdu-name">(دیسی ہلدی)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for All Ages -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="تمام عمر کے افراد کے لیے فوائد">Benefits for All Ages</h2>
+                <p class="translatable" data-urdu="ہر رکن خاندان کے لیے صحت">Health for every family member</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <h3><i class="fas fa-child"></i> <span class="translatable" data-urdu="بچوں کے لیے">For Children</span></h3>
+                    <ul>
+                        <li class="translatable" data-urdu="قدرتی نمو اور نشوونما">Natural growth and development</li>
+                        <li class="translatable" data-urdu="قوت مدافعت میں اضافہ">Increased immunity</li>
+                        <li class="translatable" data-urdu="دماغی نشوونما کے لیے ضروری غذائیت">Essential nutrition for brain development</li>
+                        <li class="translatable" data-urdu="ہڈیوں کی مضبوطی">Strong bones</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <h3><i class="fas fa-user"></i> <span class="translatable" data-urdu="بزرگوں کے لیے">For Adults</span></h3>
+                    <ul>
+                        <li class="translatable" data-urdu="مسلسل توانائی">Sustained energy</li>
+                        <li class="translatable" data-urdu="وزن کا انتظام">Weight management</li>
+                        <li class="translatable" data-urdu="دل کی صحت">Heart health</li>
+                        <li class="translatable" data-urdu="ہاضمے کی بہتری">Improved digestion</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <h3><i class="fas fa-user-friends"></i> <span class="translatable" data-urdu="خواتین کے لیے">For Women</span></h3>
+                    <ul>
+                        <li class="translatable" data-urdu="آئرن کی کمی کو پورا کرتا ہے">Addresses iron deficiency</li>
+                        <li class="translatable" data-urdu="ہڈیوں کی صحت">Bone health</li>
+                        <li class="translatable" data-urdu="خون کی کمی میں مفید">Beneficial for anemia</li>
+                        <li class="translatable" data-urdu="ہارمونل توازن">Hormonal balance</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <h3><i class="fas fa-user-md"></i> <span class="translatable" data-urdu="بزرگوں کے لیے">For Seniors</span></h3>
+                    <ul>
+                        <li class="translatable" data-urdu="جوڑوں کی صحت">Joint health</li>
+                        <li class="translatable" data-urdu="قبض سے نجات">Relief from constipation</li>
+                        <li class="translatable" data-urdu="شوگر کنٹرول">Blood sugar control</li>
+                        <li class="translatable" data-urdu="عام کمزوری میں کمی">Reduces general weakness</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal For Section -->
+    <section class="ideal-for-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="کون استعمال کرے؟">Who Should Use?</h2>
+                <p class="translatable" data-urdu="شفاء فیملی آٹا ان کے لیے بہترین انتخاب ہے">Shifa Family Flour is best for</p>
+            </div>
+            
+            <div class="ideal-grid">
+                <div class="ideal-card fade-in">
+                    <div class="ideal-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="دل کے مریض">Heart Patients</h3>
+                    <p class="translatable" data-urdu="دل کی صحت کے لیے مفید">Beneficial for heart health</p>
+                </div>
+                
+                <div class="ideal-card fade-in">
+                    <div class="ideal-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="وزن کم کرنے والے">Weight Watchers</h3>
+                    <p class="translatable" data-urdu="وزن کے انتظام میں مددگار">Helps in weight management</p>
+                </div>
+                
+                <div class="ideal-card fade-in">
+                    <div class="ideal-icon">
+                        <i class="fas fa-stomach"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="ہاضمے کے مسائل">Digestive Issues</h3>
+                    <p class="translatable" data-urdu="قبض اور ہاضمے کے لیے">For constipation and digestion</p>
+                </div>
+                
+                <div class="ideal-card fade-in">
+                    <div class="ideal-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="translatable" data-urdu="صحت مند خاندان">Healthy Families</h3>
+                    <p class="translatable" data-urdu="روزمرہ استعمال کے لیے">For daily family use</p>
+                </div>
+            </div>
+            
+            <!-- Family Testimonial -->
+            <div style="text-align: center; margin-top: 50px; padding: 30px; background: var(--light-green); border-radius: 15px;">
+                <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--earth-brown); margin-bottom: 20px;"></i>
+                <p class="translatable" style="font-size: 1.2rem; font-style: italic; color: var(--text-dark);">
+                    "شفاء فیملی آٹا ہمارے گھر کا اب اہم حصہ ہے۔ پورے خاندان کے لیے ایک ہی آٹا، سب کے لیے صحت بخش۔"
+                </p>
+                <p class="translatable" style="margin-top: 15px; color: var(--earth-brown); font-weight: 600;" data-urdu="رضیہ بیگم، لاہور">Razia Begum, Lahore</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="padding: 60px 0; background: linear-gradient(135deg, var(--earth-brown), #7a5c3a); text-align: center; color: white;">
+        <div class="container">
+            <h2 class="translatable" style="font-size: 2.5rem; margin-bottom: 20px;" data-urdu="آج ہی آزمائیں">Try It Today</h2>
+            <p class="translatable" style="font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;" data-urdu="شفاء فیملی آٹا — کیونکہ صحت سمجھوتہ نہیں مانگتی۔ مہربان دسترخوان — ہر گھر کے لیے">Shifa Family Flour — because health doesn't compromise. A compassionate dining table — for every home.</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                <a href="https://wa.me/9232227709220?text=Hello%20Shifa%20Family%20Flour%21%20I%20want%20to%20order%20for%20my%20family." 
+                   class="whatsapp-btn" style="background: white; color: var(--earth-brown);" target="_blank">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                    <span class="translatable" data-urdu="آرڈر کریں">Order Now</span>
+                </a>
+                
+                <a href="index.html" class="whatsapp-btn" style="background: transparent; border: 2px solid white;">
+                    <i class="fas fa-home"></i>
+                    <span class="translatable" data-urdu="واپس ہوم">Back to Home</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 class="translatable" data-urdu="شفاء فیملی آٹا">Shifa Family Flour</h3>
+                    <p class="translatable" data-urdu="ہر گھر کے لیے صحت کا سفر">A health journey for every home</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="translatable" data-urdu="رابطہ کریں">Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-user"></i> M Nawaz Raza</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:03227709220" style="color: white;">0322-7709220</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span class="translatable" data-urdu="پورے پاکستان میں ڈیلیوری">Delivery across Pakistan</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p class="translatable" data-urdu="© 2023 شفاء فیملی آٹا۔ جملہ حقوق محفوظ ہیں۔ ہر گھر کے لیے صحت">© 2023 Shifa Family Flour. All rights reserved. | Health for Every Home</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/product-family.js"></script>
+</body>
+</html>
