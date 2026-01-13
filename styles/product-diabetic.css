@@ -237,7 +237,7 @@ header {
 /* Product Hero */
 .product-hero {
     background: linear-gradient(135deg, var(--light-green), rgba(255,255,255,0.9));
-    padding: 150px 0 80px;
+    padding: 80px 0 80px;
     margin-top: 80px;
     position: relative;
     overflow: hidden;
