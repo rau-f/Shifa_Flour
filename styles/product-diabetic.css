@@ -176,6 +176,7 @@ header {
 .mobile-menu-btn {
     display: none;
     background: none;
+    margin-right: 20px;
     border: none;
     font-size: 1.8rem;
     color: var(--primary-green);
@@ -383,6 +384,11 @@ header {
     transition: var(--transition);
 }
 
+.ingredient-img {
+    height: 100%;
+    width: auto;
+}
+
 .ingredient-card:hover {
     transform: translateY(-10px);
 }
@@ -586,6 +592,20 @@ footer {
     .section-title h2 {
         font-size: 2rem;
     }
+
+    .ingredients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+
+    .fifteenth-ingredient {
+        width: 375px;
+    }
+    .fifteenth-img {
+        width: 100%;
+        height: auto;
+    }
     
     .nutrition-table th,
     .nutrition-table td {
@@ -601,7 +621,7 @@ footer {
     }
     
     .language-toggle {
-        top: 80px;
+        top: 100px;
     }
 }
 
