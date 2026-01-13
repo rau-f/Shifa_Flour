@@ -600,7 +600,8 @@ footer {
     }
 
     .fifteenth-ingredient {
-        width: 375px;
+        width: 210%;
+        margin-right: 20px;
     }
     .fifteenth-img {
         width: 100%;

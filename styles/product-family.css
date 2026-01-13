@@ -173,6 +173,7 @@ header {
 
 /* Mobile Menu Button */
 .mobile-menu-btn {
+    margin-right: 15px;
     display: none;
     background: none;
     border: none;
@@ -236,7 +237,7 @@ header {
 .product-hero {
     background: linear-gradient(135deg, #f8f3e8, rgba(255,255,255,0.9));
     padding: 150px 0 80px;
-    margin-top: 80px;
+    margin-top: 10px;
     position: relative;
     overflow: hidden;
 }
@@ -614,7 +615,7 @@ footer {
     }
     
     .language-toggle {
-        top: 90px;
+        top: 100px;
         right: 10px;
     }
     
@@ -650,7 +651,7 @@ footer {
     }
     
     .language-toggle {
-        top: 80px;
+        top: 100px;
     }
 }
 
