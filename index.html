@@ -17,11 +17,12 @@
         <div class="container header-container">
             <div class="logo">
                 <div class="logo-img">
-                    <img src="assets/logo/logo1.png" alt="Shifa Diabetic Flour Logo" style="height: 140%; width: auto;">
+                    <a href="index.html">
+                        <img src="assets/logo/logo1.png" alt="Shifa Diabetic Flour Logo" style="height: 60px; width: 60px;">
+                    </a>
                 </div>
-                
                 <div class="logo-text">
-                    <h1>Shifa Flour</h1>
+                    <h1>Shifa Family Foods</h1>
                     <p>Eat Natural, Live Healthy</p>
                 </div>
             </div>
@@ -30,12 +31,10 @@
                 <i class="fas fa-bars"></i>
             </button>
             
-            <nav>
+            <nav class="home-nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#products">Products</a></li>
-                    <!-- <li><a href="#benefits">Benefits</a></li> -->
-                    <!-- <li><a href="#ingredients">Ingredients</a></li> -->
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -66,7 +65,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <div class="product-tag">Bestseller</div>
-                        <img src="assets/diabetic/package2.png" width="100%">
+                        <img src="assets/diabetic/package2.png" height="100%" width="auto">
                     </div>
                     <div class="product-content">
                         <h3>Shifa Diabetic Flour</h3>
@@ -87,7 +86,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <div class="product-tag">New</div>
-                        <img src="assets/family/package1.png" width="100%">
+                        <img src="assets/family/package1.png" height="100%" width="auto">
                     </div>
                     <div class="product-content">
                         <h3>Shifa Family Flour</h3>
@@ -107,6 +106,175 @@
         </div>
     </section>
 
+    <!-- BMI Calculator Section -->
+    <section class="bmi-calculator-section" id="bmi-calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="translatable" data-urdu="بی ایم آئی کیلکولیٹر">BMI Calculator</h2>
+                <p class="translatable" data-urdu="اپنے باڈی ماس انڈیکس کا پتہ لگائیں اور اپنی صحت کا جائزہ لیں">Calculate your Body Mass Index and assess your health</p>
+            </div>
+            
+            <div class="bmi-container fade-in">
+                <div class="bmi-grid">
+                    <!-- Calculator Input -->
+                    <div class="bmi-input-card">
+                        <h3 class="translatable" data-urdu="اپنی معلومات درج کریں">Enter Your Details</h3>
+                        
+                        <div class="unit-toggle">
+                            <button class="unit-btn active" id="metricBtn">
+                                <i class="fas fa-ruler"></i> 
+                                <span class="translatable" data-urdu="میٹرک">Metric</span>
+                            </button>
+                            <button class="unit-btn" id="imperialBtn">
+                                <i class="fas fa-ruler-combined"></i> 
+                                <span class="translatable" data-urdu="امپیریل">Imperial</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Metric Inputs -->
+                        <div class="input-group metric-inputs" id="metricInputs">
+                            <div class="input-field">
+                                <label class="translatable" data-urdu="لمبائی (سینٹی میٹر)">Height (cm)</label>
+                                <input type="number" id="heightCm" placeholder="170" min="50" max="300">
+                            </div>
+                            <div class="input-field">
+                                <label class="translatable" data-urdu="وزن (کلوگرام)">Weight (kg)</label>
+                                <input type="number" id="weightKg" placeholder="70" min="20" max="300">
+                            </div>
+                        </div>
+                        
+                        <!-- Imperial Inputs -->
+                        <div class="input-group imperial-inputs" id="imperialInputs" style="display: none;">
+                            <div class="input-field">
+                                <label class="translatable" data-urdu="لمبائی (فٹ)">Height (feet)</label>
+                                <input type="number" id="heightFeet" placeholder="5" min="3" max="8">
+                            </div>
+                            <div class="input-field">
+                                <label class="translatable" data-urdu="لمبائی (انچ)">Height (inches)</label>
+                                <input type="number" id="heightInches" placeholder="7" min="0" max="11">
+                            </div>
+                            <div class="input-field">
+                                <label class="translatable" data-urdu="وزن (پونڈ)">Weight (kg)</label>
+                                <input type="number" id="weightPounds" placeholder="154" min="44" max="660">
+                            </div>
+                        </div>
+                        
+                        <!-- Age Input -->
+                        <div class="input-field">
+                            <label class="translatable" data-urdu="عمر (اختیاری)">Age (optional)</label>
+                            <input type="number" id="age" placeholder="25" min="2" max="120">
+                        </div>
+                        
+                        <!-- Gender Selection -->
+                        <div class="gender-selection">
+                            <label class="translatable" data-urdu="جنس (اختیاری)">Gender (optional)</label>
+                            <div class="gender-options">
+                                <button class="gender-btn" data-gender="male">
+                                    <i class="fas fa-mars"></i>
+                                    <span class="translatable" data-urdu="مرد">Male</span>
+                                </button>
+                                <button class="gender-btn" data-gender="female">
+                                    <i class="fas fa-venus"></i>
+                                    <span class="translatable" data-urdu="خاتون">Female</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <button class="calculate-btn" id="calculateBmi">
+                            <i class="fas fa-calculator"></i>
+                            <span class="translatable" data-urdu="بی ایم آئی کا حساب لگائیں">Calculate BMI</span>
+                        </button>
+                        
+                        <div class="bmi-disclaimer">
+                            <p class="translatable" data-urdu="بی ایم آئی ایک عام رہنما اصول ہے اور اسے پیشہ ورانہ طبی مشورے کا متبادل نہیں سمجھا جانا چاہیے۔">BMI is a general guideline and should not replace professional medical advice.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Results Display -->
+                    <div class="bmi-result-card">
+                        <h3 class="translatable" data-urdu="آپ کا نتیجہ">Your Result</h3>
+                        
+                        <div class="result-display" id="resultDisplay">
+                            <div class="bmi-circle">
+                                <div class="bmi-value" id="bmiValue">--</div>
+                                <div class="bmi-label translatable" data-urdu="بی ایم آئی">BMI</div>
+                            </div>
+                            
+                            <div class="bmi-category" id="bmiCategory">
+                                <span class="translatable" data-urdu="نتیجہ ظاہر کرنے کے لیے معلومات درج کریں">Enter details to see result</span>
+                            </div>
+                            
+                            <div class="bmi-details">
+                                <div class="detail-item">
+                                    <span class="translatable" data-urdu="قسم:">Category:</span>
+                                    <span id="categoryDetail" class="translatable" data-urdu="--">--</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="translatable" data-urdu="صحت مند رینج:">Healthy Range:</span>
+                                    <span id="healthyRange">18.5 - 24.9</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="translatable" data-urdu="بی ایم آئی پرائم:">BMI Prime:</span>
+                                    <span id="bmiPrime">--</span>
+                                </div>
+                            </div>
+                            
+                            <!-- BMI Scale -->
+                            <div class="bmi-scale">
+                                <div class="scale-label translatable" data-urdu="کم وزن">Underweight</div>
+                                <div class="scale-bar">
+                                    <div class="scale-segment underweight"></div>
+                                    <div class="scale-segment normal"></div>
+                                    <div class="scale-segment overweight"></div>
+                                    <div class="scale-segment obese"></div>
+                                    <div class="scale-marker" id="scaleMarker"></div>
+                                </div>
+                                <div class="scale-label translatable" data-urdu="موٹاپا">Obese</div>
+                            </div>
+                            
+                            <!-- Health Recommendations -->
+                            <div class="recommendations" id="recommendations">
+                                <h4 class="translatable" data-urdu="صحت کے مشورے">Health Recommendations</h4>
+                                <p class="translatable" data-urdu="اپنا بی ایم آئی جاننے کے بعد، صحت مند وزن برقرار رکھنے کے لیے شفاء کے قدرتی آٹے کا استعمال کریں۔">After knowing your BMI, use Shifa's natural flour to maintain a healthy weight.</p>
+                                <a href="#products" class="bmi-product-link translatable" data-urdu="ہمارے مصنوعات دیکھیں">View Our Products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Information Section -->
+                <div class="bmi-info">
+                    <h3 class="translatable" data-urdu="بی ایم آئی کے بارے میں">About BMI</h3>
+                    <p class="translatable" data-urdu="باڈی ماس انڈیکس (بی ایم آئی) آپ کے قد اور وزن کے تناسب کا پیمانہ ہے جو آپ کے جسم کے وزن کی صحت مند سطح کا اندازہ لگانے میں مدد کرتا ہے۔">Body Mass Index (BMI) is a measure of your height-to-weight ratio that helps estimate a healthy body weight level.</p>
+                    
+                    <div class="bmi-categories">
+                        <div class="category-item">
+                            <div class="category-color underweight"></div>
+                            <span class="translatable" data-urdu="کم وزن (< 18.5)">Underweight (< 18.5)</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-color normal"></div>
+                            <span class="translatable" data-urdu="نارمل (18.5 - 24.9)">Normal (18.5 - 24.9)</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-color overweight"></div>
+                            <span class="translatable" data-urdu="زیادہ وزن (25 - 29.9)">Overweight (25 - 29.9)</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-color obese"></div>
+                            <span class="translatable" data-urdu="موٹاپا (> 30)">Obese (> 30)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="health-tip">
+                        <i class="fas fa-heart" style="color: var(--secondary-green);"></i>
+                        <p class="translatable" data-urdu="صحت مند بی ایم آئی برقرار رکھنے میں شفاء کے قدرتی آٹے کا استعمال آپ کی مدد کر سکتا ہے۔">Using Shifa's natural flour can help you maintain a healthy BMI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Islamic Touch Section -->
     <section class="islamic-section">
         <div class="container">
@@ -115,19 +283,55 @@
                     <i class="fas fa-star-and-crescent"></i>
                 </div>
                 
-                <div class="hadith">
-                    <p class="hadith-text">"In black seeds (Kalonji) there is healing for every disease except death."</p>
-                    <p class="hadith-reference">— Sahih al-Bukhari & Muslim</p>
+                <!-- Arabic Hadith with Beautiful Calligraphy -->
+                <div class="arabic-hadith">
+                    <p class="arabic-text" style="font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 1.8;">
+                        فِي الْحَبَّةِ السَّوْدَاءِ شِفَاءٌ مِنْ كُلِّ دَاءٍ إِلَّا السَّامَ
+                    </p>
+                    <p class="hadith-reference" style="font-family: 'Amiri', serif; font-style: italic;">
+                        — صحيح البخاري ومسلم
+                    </p>
                 </div>
                 
-                <div class="hadith">
-                    <p class="hadith-text">"Barley is good for you; it protects the stomach from diseases."</p>
-                    <p class="hadith-reference">— Ibn Majah</p>
+                <!-- Urdu Translation -->
+                <div class="hadith urdu-hadith">
+                    <p class="hadith-text urdu-text" style="font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.3rem; line-height: 2; margin-bottom: 20px;">
+                        کلونجی میں موت کے علاوہ ہر بیماری کا علاج ہے
+                    </p>
+                    <p class="hadith-reference urdu-text" style="font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.2rem;">
+                        — صحیح بخاری و مسلم
+                    </p>
                 </div>
                 
-                <p style="color: var(--primary-green); font-weight: 500; margin-top: 20px;">
-                    Our formula is inspired by the healing wisdom of the Sunnah, combining traditional knowledge with modern nutrition science.
-                </p>
+                <!-- Second Hadith in Arabic -->
+                <div class="arabic-hadith" style="margin-top: 40px;">
+                    <p class="arabic-text" style="font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 1.8;">
+                        الْحَبَّةُ السَّوْدَاءُ شِفَاءٌ مِنْ كُلِّ دَاءٍ
+                    </p>
+                    <p class="hadith-reference" style="font-family: 'Amiri', serif; font-style: italic;">
+                        — ابن ماجہ
+                    </p>
+                </div>
+                
+                <!-- Second Hadith Urdu -->
+                <div class="hadith urdu-hadith">
+                    <p class="hadith-text urdu-text" style="font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.3rem; line-height: 2; margin-bottom: 20px;">
+                        جو (بارلے) تمہارے لیے مفید ہے، یہ پیٹ کی بیماریوں سے محفوظ رکھتا ہے
+                    </p>
+                    <p class="hadith-reference urdu-text" style="font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.2rem;">
+                        — ابن ماجہ
+                    </p>
+                </div>
+                
+                <!-- Wisdom Message -->
+                <div class="wisdom-message">
+                    <p class="urdu-text" style="font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.3rem; line-height: 1.8; color: var(--primary-green); font-weight: 500; margin-top: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        ہمارا فارمولا سنت نبوی ﷺ کی شفا بخش حکمت سے متاثر ہے، جو جدید غذائی سائنس کے ساتھ مل کر صحت کا ایک بہترین امتزاج پیش کرتا ہے۔
+                    </p>
+                    <p class="translatable" style="color: var(--earth-brown); font-size: 1.1rem; margin-top: 15px; font-style: italic;">
+                        Our formula is inspired by the healing wisdom of the Sunnah, combined with modern nutrition science.
+                    </p>
+                </div>
             </div>
         </div>
     </section>

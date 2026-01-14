@@ -98,7 +98,6 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
 }
 
 nav a {
@@ -129,9 +128,13 @@ nav a:hover::after {
     width: 100%;
 }
 
+.home-nav {
+    margin-right: 15px;
+}
+
 .mobile-menu-btn {
-    margin-right: -70px;
     display: none;
+    margin-right: 0;
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -141,8 +144,8 @@ nav a:hover::after {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(45, 90, 39, 0.9), rgba(62, 124, 58, 0.8)), 
-                url('../assets/home/background.png');
+    background: linear-gradient(rgba(45, 90, 39, 0.7), rgba(62, 124, 58, 0.6)), 
+                 url('../assets/home/background.png');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -391,10 +394,349 @@ nav a:hover::after {
     color: var(--primary-green);
 }
 
-/* Islamic Touch Section */
+/* BMI Calculator Styles */
+.bmi-calculator-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--white), #f9f9f9);
+}
+
+.bmi-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.bmi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.bmi-input-card, .bmi-result-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: var(--light-green);
+}
+
+.bmi-result-card {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: white;
+}
+
+.unit-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.unit-btn {
+    flex: 1;
+    padding: 12px;
+    background: white;
+    border: 2px solid var(--secondary-green);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.unit-btn.active {
+    background: var(--secondary-green);
+    color: white;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-field input:focus {
+    border-color: var(--secondary-green);
+    outline: none;
+}
+
+.gender-selection {
+    margin: 25px 0;
+}
+
+.gender-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.gender-btn {
+    flex: 1;
+    padding: 12px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.gender-btn:hover {
+    border-color: var(--secondary-green);
+}
+
+.gender-btn.active {
+    background: var(--secondary-green);
+    color: white;
+    border-color: var(--secondary-green);
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.calculate-btn:hover {
+    background: var(--secondary-green);
+    transform: translateY(-3px);
+}
+
+.bmi-disclaimer {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-left: 3px solid var(--accent-gold);
+}
+
+.result-display {
+    text-align: center;
+}
+
+.bmi-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.bmi-value {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.bmi-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.bmi-category {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    min-height: 36px;
+}
+
+.bmi-details {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.bmi-scale {
+    margin: 30px 0;
+}
+
+.scale-bar {
+    height: 20px;
+    background: linear-gradient(90deg, 
+        #3498db 0%, 
+        #3498db 20%, 
+        #2ecc71 20%, 
+        #2ecc71 50%, 
+        #f39c12 50%, 
+        #f39c12 80%, 
+        #e74c3c 80%, 
+        #e74c3c 100%);
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.scale-marker {
+    position: absolute;
+    top: -5px;
+    width: 4px;
+    height: 30px;
+    background: white;
+    border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.recommendations {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.bmi-product-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: white;
+    color: var(--primary-green);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.bmi-product-link:hover {
+    background: var(--accent-gold);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.bmi-info {
+    padding: 30px;
+    background: var(--cream);
+    border-radius: 15px;
+    border-left: 5px solid var(--secondary-green);
+}
+
+.bmi-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.category-color.underweight { background: #3498db; }
+.category-color.normal { background: #2ecc71; }
+.category-color.overweight { background: #f39c12; }
+.category-color.obese { background: #e74c3c; }
+
+.health-tip {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin-top: 25px;
+    border-left: 4px solid var(--secondary-green);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .bmi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bmi-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .bmi-value {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .bmi-container {
+        padding: 20px;
+    }
+    
+    .bmi-input-card, .bmi-result-card {
+        padding: 20px;
+    }
+    
+    .bmi-categories {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Islamic Section Enhanced Styles */
 .islamic-section {
     padding: 80px 0;
-    background-color: var(--light-green);
+    background: linear-gradient(135deg, #f8f6f0, #f0ede4);
     position: relative;
     overflow: hidden;
 }
@@ -405,50 +747,173 @@ nav a:hover::after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10px;
-    background: linear-gradient(90deg, var(--primary-green), var(--accent-gold), var(--primary-green));
+    height: 5px;
+    background: linear-gradient(90deg, 
+        var(--primary-green) 0%,
+        var(--accent-gold) 50%,
+        var(--primary-green) 100%);
 }
 
 .islamic-content {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .islamic-icon {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--accent-gold);
-    margin-bottom: 20px;
-    animation: pulse 2s infinite;
+    margin-bottom: 30px;
+    animation: gentlePulse 3s infinite ease-in-out;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+@keyframes gentlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.arabic-hadith {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(45, 90, 39, 0.05));
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-right: 5px solid var(--accent-gold);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.arabic-text {
+    color: var(--primary-green);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 .hadith {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
     padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+    border-radius: 15px;
+    margin: 25px auto;
+    max-width: 800px;
     box-shadow: var(--shadow);
     position: relative;
-    border-right: 5px solid var(--accent-gold);
+    border-top: 3px solid var(--accent-gold);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hadith:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hadith::before {
+    content: "ﷺ";
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    background: var(--accent-gold);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
 }
 
 .hadith-text {
     font-size: 1.4rem;
-    font-style: italic;
-    color: var(--primary-green);
+    color: #2c3e50;
     margin-bottom: 15px;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 .hadith-reference {
     color: var(--earth-brown);
     font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.urdu-hadith .hadith-text {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.urdu-hadith .hadith-reference {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    text-align: center;
+}
+
+.wisdom-message {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 248, 0.95));
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+    border-left: 4px solid var(--secondary-green);
+    border-right: 4px solid var(--secondary-green);
+}
+
+/* Decorative elements */
+.islamic-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233e7c3a' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Add Amiri font for Arabic */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .arabic-hadith {
+        padding: 20px;
+    }
+    
+    .arabic-text {
+        font-size: 1.6rem;
+    }
+    
+    .hadith {
+        padding: 20px;
+    }
+    
+    .hadith-text {
+        font-size: 1.2rem;
+    }
+    
+    .urdu-hadith .hadith-text {
+        font-size: 1.3rem;
+    }
+    
+    .wisdom-message .urdu-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .arabic-text {
+        font-size: 1.4rem;
+    }
+    
+    .urdu-hadith .hadith-text {
+        font-size: 1.1rem;
+    }
+    
+    .hadith::before {
+        right: 15px;
+    }
 }
 
 /* WhatsApp Float Button */
@@ -560,15 +1025,61 @@ footer {
 
 @media (max-width: 768px) {
     .header-container {
+        position: relative;
         padding: 15px 0;
     }
     
     nav ul {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-top: 2px solid var(--light-green);
+        z-index: 1001;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        background-color: var(--light-green);
+        color: var(--primary-green);
+    }
+    
+    nav ul li a::after {
+        display: none;
     }
     
     .mobile-menu-btn {
         display: block;
+        margin-right: -15%;
+    }
+    
+    .mobile-menu-btn i {
+        transition: transform 0.3s ease;
+    }
+    
+    .mobile-menu-btn.active i {
+        transform: rotate(90deg);
     }
     
     .hero {
@@ -588,6 +1099,10 @@ footer {
 @media (max-width: 576px) {
     .container {
         padding: 0 15px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.5rem;
     }
     
     .hero {
