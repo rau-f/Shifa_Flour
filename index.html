@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Urdu Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/home.css">
 
 </head>
 <body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button class="lang-btn active" id="englishBtn">English</button>
+        <button class="lang-btn" id="urduBtn">اردو</button>
+    </div>
+    
     <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
@@ -22,8 +30,8 @@
                     </a>
                 </div>
                 <div class="logo-text">
-                    <h1>Shifa Family Foods</h1>
-                    <p>Eat Natural, Live Healthy</p>
+                    <h1 class="translatable" data-urdu="شفاء فیملی فوڈز">Shifa Family Foods</h1>
+                    <p class="translatable" data-urdu="قدرتی کھائیں، صحت مند رہیں">Eat Natural, Live Healthy</p>
                 </div>
             </div>
             
@@ -33,10 +41,10 @@
             
             <nav class="home-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" class="translatable" data-urdu="ہوم">Home</a></li>
+                    <li><a href="#products" class="translatable" data-urdu="پروڈکٹ">Products</a></li>
+                    <li><a href="#about" class="translatable" data-urdu="ہمارے بارے میں">About</a></li>
+                    <li><a href="#contact" class="translatable" data-urdu="رابطہ">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -46,9 +54,9 @@
     <section class="hero" id="home">
         <div class="floating-grains" id="floatingGrains"></div>
         <div class="container hero-content">
-            <h2>A Step Towards Natural Wellness</h2>
-            <p>Scientifically blended multigrain flour specially designed to support healthy blood sugar levels, improve digestion, and provide sustained energy.</p>
-            <a href="#products" class="cta-button">Discover Our Products</a>
+            <h2 class="translatable" data-urdu="قدرتی صحت مندی کی طرف ایک قدم">A Step Towards Natural Wellness</h2>
+            <p class="translatable" data-urdu="سائنسی طور پر تیار کردہ ملٹی گرین آٹا جو خون میں شوگر کی سطح کو کنٹرول کرنے، ہاضمے کو بہتر بنانے اور مستقل توانائی فراہم کرنے کے لیے ڈیزائن کیا گیا ہے۔">Scientifically blended multigrain flour specially designed to support healthy blood sugar levels, improve digestion, and provide sustained energy.</p>
+            <a href="#products" class="cta-button translatable" data-urdu="ہماری پروڈکٹس دریافت کریں">Discover Our Products</a>
         </div>
     </section>
 
@@ -56,31 +64,31 @@
     <section class="products-section" id="products">
         <div class="container">
             <div class="section-title">
-                <h2>Our Natural Products</h2>
-                <p>100% natural, preservative-free flour blends crafted for your health and wellness</p>
+                <h2 class="translatable" data-urdu="ہماری قدرتی پروڈکٹس">Our Natural Products</h2>
+                <p class="translatable" data-urdu="100 فی صد قدرتی، محفوظ کے بغیر آٹا کا مزہ آپ کی صحت اور تندرستی کے لیے تیار کیا گیا ہے">100% natural, preservative-free flour blends crafted for your health and wellness</p>
             </div>
             
             <div class="products-grid">
                 <!-- Product 1: Diabetic Flour -->
                 <div class="product-card">
                     <div class="product-image">
-                        <div class="product-tag">Bestseller</div>
+                        <div class="product-tag translatable" data-urdu="بہترین فروخت">Bestseller</div>
                         <a href="product-diabetic.html">
                         <img src="assets/diabetic/package2.png" height="auto" width="100%">
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3>Shifa Diabetic Flour</h3>
-                        <p>A scientifically blended multigrain formula specially designed to support healthy blood sugar levels and improve digestion.</p>
+                        <h3 class="translatable" data-urdu="شفاء ذیابیطس آٹا">Shifa Diabetic Flour</h3>
+                        <p class="translatable" data-urdu="ایک سائنسی طور پر تیار کردہ ملٹی گرین فارمولا جو خون میں شوگر کی سطح کو کنٹرول کرنے اور ہاضمے کو بہتر بنانے کے لیے ڈیزائن کیا گیا ہے۔">A scientifically blended multigrain formula specially designed to support healthy blood sugar levels and improve digestion.</p>
                         
                         <ul class="product-features">
-                            <li><i class="fas fa-check-circle"></i> Low Glycemic Index</li>
-                            <li><i class="fas fa-check-circle"></i> High Fiber Content</li>
-                            <li><i class="fas fa-check-circle"></i> Natural Ingredients</li>
-                            <li><i class="fas fa-check-circle"></i> Doctor Recommended</li>
+                            <li class="translatable" data-urdu="کم گلیسیمک انڈیکس"><i class="fas fa-check-circle"></i> <span>Low Glycemic Index</span></li>
+                            <li class="translatable" data-urdu="ہائی فائبر مواد"><i class="fas fa-check-circle"></i> <span>High Fiber Content</span></li>
+                            <li class="translatable" data-urdu="قدرتی اجزاء"><i class="fas fa-check-circle"></i> <span>Natural Ingredients</span></li>
+                            <li class="translatable" data-urdu="ڈاکٹر کی سفارش"><i class="fas fa-check-circle"></i> <span>Doctor Recommended</span></li>
                         </ul>
                         
-                        <a href="product-diabetic.html" class="product-button">View Details</a>
+                        <a href="product-diabetic.html" class="product-button translatable" data-urdu="تفصیلات دیکھیں">View Details</a>
                     </div>
                 </div>
                 
@@ -93,17 +101,17 @@
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3>Shifa Family Flour</h3>
-                        <p>Quality multigrain flour for everyday family use, packed with nutrients for a healthier lifestyle.</p>
+                        <h3 class="translatable" data-urdu="شفاء فیملی آٹا">Shifa Family Flour</h3>
+                        <p class="translatable" data-urdu="روزمرہ کے استعمال کے لیے معیاری ملٹی گرین آٹا، صحت مند طرز زندگی کے لیے غذائیت سے بھرپور۔">Quality multigrain flour for everyday family use, packed with nutrients for a healthier lifestyle.</p>
                         
                         <ul class="product-features">
-                            <li><i class="fas fa-check-circle"></i> Nutrient-Rich Blend</li>
-                            <li><i class="fas fa-check-circle"></i> Perfect for Daily Use</li>
-                            <li><i class="fas fa-check-circle"></i> Whole Grain Goodness</li>
-                            <li><i class="fas-check-circle"></i> Family-Friendly</li>
+                            <li class="translatable" data-urdu="غذائیت سے بھرپور مزہ"><i class="fas fa-check-circle"></i> <span>Nutrient-Rich Blend</span></li>
+                            <li class="translatable" data-urdu="روزمرہ کے استعمال کے لیے بہترین"><i class="fas fa-check-circle"></i> <span>Perfect for Daily Use</span></li>
+                            <li class="translatable" data-urdu="مکمل اناج کی نیکی"><i class="fas fa-check-circle"></i> <span>Whole Grain Goodness</span></li>
+                            <li class="translatable" data-urdu="خاندان کے لیے موزوں"><i class="fas fa-check-circle"></i> <span>Family-Friendly</span></li>
                         </ul>
                         
-                        <a href="product-family.html" class="product-button">View Details</a>
+                        <a href="product-family.html" class="product-button translatable" data-urdu="تفصیلات دیکھیں">View Details</a>
                     </div>
                 </div>
             </div>

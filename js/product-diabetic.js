@@ -18,6 +18,12 @@ function translateToUrdu() {
     englishBtn.classList.remove('active');
     urduBtn.classList.add('active');
     
+    // Toggle urdu-mode on nutrition table
+    const nutritionTable = document.querySelector('.nutrition-table');
+    if (nutritionTable) {
+        nutritionTable.classList.add('urdu-mode');
+    }
+    
     // Update mobile menu text if it's open
     updateMobileMenuText();
 }
@@ -35,6 +41,12 @@ function translateToEnglish() {
     currentLang = 'en';
     urduBtn.classList.remove('active');
     englishBtn.classList.add('active');
+    
+    // Remove urdu-mode from nutrition table
+    const nutritionTable = document.querySelector('.nutrition-table');
+    if (nutritionTable) {
+        nutritionTable.classList.remove('urdu-mode');
+    }
     
     // Update mobile menu text if it's open
     updateMobileMenuText();

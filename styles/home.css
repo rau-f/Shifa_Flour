@@ -13,6 +13,57 @@
     --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
+/* Urdu Font Class */
+.urdu-text {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    unicode-bidi: embed;
+    line-height: 1.8;
+    font-size: 1.1em;
+    display: block;
+}
+
+/* Urdu text in centered containers should remain centered */
+div[style*="text-align: center"] .urdu-text,
+div[style*="text-align:center"] .urdu-text {
+    text-align: center !important;
+}
+
+/* Language Toggle */
+.language-toggle {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    overflow: hidden;
+    border: 2px solid var(--secondary-green);
+}
+
+.lang-btn {
+    padding: 4px 8px;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 50px;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.lang-btn.active {
+    background: var(--secondary-green);
+    color: white;
+}
+
+.lang-btn:not(.active):hover {
+    background: var(--light-green);
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -61,43 +112,66 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
+}
+
+body:has(.logo-text h1.urdu-text) .header-container {
+    flex-direction: row-reverse;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+body:has(.logo-text h1.urdu-text) .logo {
+    flex-direction: row-reverse;
 }
 
 .logo-img {
-    height: 60px;
+    height: 45px;
     width: auto;
     border-radius: 8px;
     background: #ffffff;
-    padding: 8px;
+    padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 
 .logo-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: var(--primary-green);
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+}
+
+.logo-text h1.urdu-text {
+    text-align: right;
 }
 
 .logo-text p {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: var(--text-light);
+}
+
+.logo-text p.urdu-text {
+    text-align: right;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+}
+
+.home-nav ul {
+    gap: 30px;
 }
 
 nav a {
@@ -135,11 +209,17 @@ nav a:hover::after {
 .mobile-menu-btn {
     display: none;
     margin-right: 0;
+    margin-left: 0;
     background: none;
     border: none;
     font-size: 1.5rem;
     color: var(--primary-green);
     cursor: pointer;
+}
+
+body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
+    margin-right: auto;
+    margin-left: 0;
 }
 
 /* Hero Section */
@@ -249,12 +329,21 @@ nav a:hover::after {
     margin-bottom: 60px;
 }
 
+.section-title .urdu-text {
+    text-align: center;
+    display: block;
+}
+
 .section-title h2 {
     font-size: 2.5rem;
     color: var(--primary-green);
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
+}
+
+.section-title h2.urdu-text {
+    text-align: center;
 }
 
 .section-title h2::after {
@@ -356,9 +445,17 @@ nav a:hover::after {
     color: var(--primary-green);
 }
 
+.product-content h3.urdu-text {
+    text-align: right;
+}
+
 .product-content p {
     color: var(--text-light);
     margin-bottom: 20px;
+}
+
+.product-content p.urdu-text {
+    text-align: right;
 }
 
 .product-features {
@@ -373,8 +470,16 @@ nav a:hover::after {
     gap: 10px;
 }
 
+.product-features li.urdu-text {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    text-align: right;
+}
+
 .product-features i {
     color: var(--secondary-green);
+    flex-shrink: 0;
+    font-size: 1.2rem;
 }
 
 .product-button {
@@ -597,6 +702,10 @@ nav a:hover::after {
 .detail-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
+}
+
+body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
+    flex-direction: row-reverse;
 }
 
 .bmi-scale {
@@ -1045,6 +1154,8 @@ footer {
 
     nav ul.active {
         display: flex;
+        flex-direction: column;
+        gap: 0;
     }
     
     nav ul li {
@@ -1067,6 +1178,23 @@ footer {
     
     nav ul li a::after {
         display: none;
+    }
+
+    /* Urdu (RTL) adjustments for mobile nav */
+    body:has(.logo-text h1.urdu-text) nav ul {
+        direction: rtl;
+        text-align: right;
+    }
+    body:has(.logo-text h1.urdu-text) nav ul li {
+        text-align: right;
+    }
+    body:has(.logo-text h1.urdu-text) nav ul li a {
+        padding-left: 15px;
+        padding-right: 20px;
+    }
+    body:has(.logo-text h1.urdu-text) nav ul li a:hover {
+        padding-right: 30px;
+        padding-left: 15px;
     }
     
     .mobile-menu-btn {

@@ -1,3 +1,67 @@
+// Language Toggle Functionality
+const englishBtn = document.getElementById('englishBtn');
+const urduBtn = document.getElementById('urduBtn');
+const translatableElements = document.querySelectorAll('.translatable');
+
+let currentLang = 'en';
+
+// Function to translate to Urdu
+function translateToUrdu() {
+    translatableElements.forEach(element => {
+        const urduText = element.getAttribute('data-urdu');
+        if (urduText) {
+            element.classList.add('urdu-text');
+            // Check if element has a span child (like in product features)
+            const span = element.querySelector('span');
+            if (span) {
+                span.textContent = urduText;
+            } else {
+                element.textContent = urduText;
+            }
+        }
+    });
+    currentLang = 'ur';
+    englishBtn.classList.remove('active');
+    urduBtn.classList.add('active');
+    // Recalculate BMI to update category text in Urdu
+    if (document.getElementById('heightCm').value) {
+        calculateBMI();
+    }
+}
+
+// Function to translate to English
+function translateToEnglish() {
+    translatableElements.forEach(element => {
+        if (element.getAttribute('data-urdu')) {
+            element.classList.remove('urdu-text');
+            const span = element.querySelector('span');
+            const originalText = element.getAttribute('data-original');
+            if (span) {
+                span.textContent = originalText;
+            } else {
+                element.textContent = originalText;
+            }
+        }
+    });
+    currentLang = 'en';
+    urduBtn.classList.remove('active');
+    englishBtn.classList.add('active');
+    // Recalculate BMI to update category text in English
+    if (document.getElementById('heightCm').value) {
+        calculateBMI();
+    }
+}
+
+// Save original text
+translatableElements.forEach(element => {
+    const span = element.querySelector('span');
+    element.setAttribute('data-original', span ? span.textContent : element.textContent);
+});
+
+// Event Listeners for language toggle
+englishBtn.addEventListener('click', translateToEnglish);
+urduBtn.addEventListener('click', translateToUrdu);
+
 // Floating grains animation
 document.addEventListener('DOMContentLoaded', function() {
     const floatingGrains = document.getElementById('floatingGrains');
@@ -201,31 +265,39 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('bmiValue').textContent = bmi;
         
         // Determine category
-        let category, categoryText, color;
+        let category, categoryText, categoryTextUrdu, color;
         if (bmi < 18.5) {
             category = 'underweight';
             categoryText = 'Underweight';
+            categoryTextUrdu = 'کم وزن';
             color = '#3498db';
         } else if (bmi >= 18.5 && bmi <= 24.9) {
             category = 'normal';
             categoryText = 'Normal Weight';
+            categoryTextUrdu = 'معمول وزن';
             color = '#2ecc71';
         } else if (bmi >= 25 && bmi <= 29.9) {
             category = 'overweight';
             categoryText = 'Overweight';
+            categoryTextUrdu = 'زیادہ وزن';
             color = '#f39c12';
         } else {
             category = 'obese';
             categoryText = 'Obese';
+            categoryTextUrdu = 'موٹاپا';
             color = '#e74c3c';
         }
         
+        // Get the appropriate text based on current language
+        const displayText = currentLang === 'ur' ? categoryTextUrdu : categoryText;
+        
         // Update category text
         document.getElementById('bmiCategory').innerHTML = 
-            `<span style="color: ${color}; font-weight: 700;">${categoryText}</span>`;
+            `<span style="color: ${color}; font-weight: 700;">${displayText}</span>`;
         
         // Update category detail
-        document.getElementById('categoryDetail').textContent = categoryText;
+        document.getElementById('categoryDetail').textContent = displayText;
+        document.getElementById('categoryDetail').setAttribute('data-current', displayText);
         
         // Calculate BMI Prime
         let bmiPrime = (bmi / 25).toFixed(2);
