@@ -290,6 +290,12 @@ body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
     opacity: 0.15;
 }
 
+.product-hero {
+    padding: 100px 0 80px;
+    margin-top: 80px;
+    position: relative;
+}
+
 .product-hero .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
