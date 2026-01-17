@@ -88,7 +88,7 @@ h1, h2, h3, h4 {
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;;
     padding: 0 20px;
 }
 
@@ -842,6 +842,142 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
     }
 }
 
+/* Video Section Styles */
+.video-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, 
+        var(--primary-green) 0%,
+        var(--accent-gold) 50%,
+        var(--primary-green) 100%);
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    background: var(--primary-green);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-description {
+    padding: 30px;
+    background: var(--white);
+}
+
+.video-description h3 {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.video-description p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.video-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid var(--light-green);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: var(--light-green);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-item i {
+    color: var(--secondary-green);
+    font-size: 1.2rem;
+}
+
+.feature-item span {
+    font-weight: 500;
+    color: var(--primary-green);
+}
+
+/* Urdu text adjustments for video section */
+body:has(.lang-btn.active:nth-child(2)) .video-description h3.urdu-text {
+    text-align: right;
+}
+
+body:has(.lang-btn.active:nth-child(2)) .video-description p.urdu-text {
+    text-align: right;
+}
+
+body:has(.lang-btn.active:nth-child(2)) .feature-item {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-container {
+        margin: 0 15px;
+    }
+    
+    .video-description {
+        padding: 20px;
+    }
+    
+    .video-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-section {
+        padding: 60px 0;
+    }
+    
+    .video-description h3 {
+        font-size: 1.5rem;
+    }
+}
+
 /* Islamic Section Enhanced Styles */
 .islamic-section {
     padding: 80px 0;
@@ -1227,6 +1363,7 @@ footer {
 @media (max-width: 576px) {
     .container {
         padding: 0 15px;
+        padding-top: 20px;
     }
 
     .logo-text h1 {
