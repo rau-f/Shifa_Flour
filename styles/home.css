@@ -1363,7 +1363,7 @@ footer {
 @media (max-width: 576px) {
     .container {
         padding: 0 15px;
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     .logo-text h1 {
