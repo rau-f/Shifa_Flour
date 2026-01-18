@@ -13,13 +13,24 @@
     --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
+/* Jameel Noori Nastaliq Font */
+@font-face {
+    font-family: 'Jameel Noori Nastaleeq';
+    src: url('../fonts/JameelNooriNastaleeq.woff2') format('woff2'),
+         url('../fonts/JameelNooriNastaleeq.woff') format('woff'),
+         url('../fonts/JameelNooriNastaleeq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Urdu Font Class */
 .urdu-text {
-    font-family: 'Noto Nastaliq Urdu', serif;
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
     direction: rtl;
     unicode-bidi: embed;
     line-height: 1.8;
-    font-size: 1.1em;
+    font-size: 1.8em;
     display: block;
 }
 
@@ -32,7 +43,7 @@ div[style*="text-align:center"] .urdu-text {
 /* Language Toggle */
 .language-toggle {
     position: fixed;
-    top: 80px;
+    top: 90px;
     right: 20px;
     z-index: 1000;
     background: white;
@@ -242,6 +253,10 @@ body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
     position: relative;
     z-index: 2;
     animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-content p.translatable {
+    font-size: 1.5em;
 }
 
 @keyframes fadeInUp {
@@ -489,6 +504,7 @@ body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
     color: white;
     text-decoration: none;
     border-radius: 30px;
+    font-size: 1.2em;
     font-weight: 500;
     transition: var(--transition);
     border: 2px solid var(--primary-green);
@@ -760,6 +776,7 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
     color: var(--primary-green);
     text-decoration: none;
     border-radius: 25px;
+    font-size: 1.2em;
     font-weight: 600;
     transition: var(--transition);
 }
@@ -803,7 +820,7 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
 
 .health-tip {
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
     gap: 15px;
     padding: 20px;
     background: white;

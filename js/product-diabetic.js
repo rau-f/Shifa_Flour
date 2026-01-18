@@ -3,7 +3,7 @@ const englishBtn = document.getElementById('englishBtn');
 const urduBtn = document.getElementById('urduBtn');
 const translatableElements = document.querySelectorAll('.translatable');
 
-let currentLang = 'en';
+let currentLang = 'ur';
 
 // Function to translate to Urdu
 function translateToUrdu() {
@@ -56,6 +56,9 @@ function translateToEnglish() {
 translatableElements.forEach(element => {
     element.setAttribute('data-original', element.innerHTML);
 });
+
+// Initialize with Urdu as default language
+translateToUrdu();
 
 // Event Listeners for language toggle
 englishBtn.addEventListener('click', translateToEnglish);

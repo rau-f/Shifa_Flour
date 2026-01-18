@@ -13,13 +13,24 @@
     --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
+/* Jameel Noori Nastaliq Font */
+@font-face {
+    font-family: 'Jameel Noori Nastaleeq';
+    src: url('../fonts/JameelNooriNastaleeq.woff2') format('woff2'),
+         url('../fonts/JameelNooriNastaleeq.woff') format('woff'),
+         url('../fonts/JameelNooriNastaleeq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Urdu Font Class */
 .urdu-text {
-    font-family: 'Noto Nastaliq Urdu', serif;
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
     direction: rtl;
     unicode-bidi: embed;
     line-height: 1.8;
-    font-size: 1.1em;
+    font-size: 2em;
     display: block;
 }
 
@@ -60,11 +71,11 @@ h1, h2, h3, h4 {
 /* Language Toggle */
 .language-toggle {
     position: fixed;
-    top: 100px;
+    top: 90px;
     right: 20px;
     z-index: 1000;
     background: white;
-    border-radius: 30px;
+    border-radius: 20px;
     box-shadow: var(--shadow);
     display: flex;
     overflow: hidden;
@@ -72,14 +83,15 @@ h1, h2, h3, h4 {
 }
 
 .lang-btn {
-    padding: 10px 20px;
+    padding: 4px 8px;
     background: transparent;
     border: none;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
-    min-width: 100px;
+    min-width: 50px;
     text-align: center;
+    font-size: 0.75rem;
 }
 
 .lang-btn.active {
@@ -105,7 +117,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 0 15px;
 }
 
 body:has(.logo-text h1.urdu-text) .header-container {
@@ -679,7 +691,7 @@ footer {
     }
     
     .lang-btn {
-        min-width: 80px;
+        min-width: 40px;
         padding: 8px 15px;
     }
 }
