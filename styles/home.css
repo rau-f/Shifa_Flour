@@ -1,3 +1,68 @@
+/* Double Video Section (How to Prepare + Benefits) */
+.double-video {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.double-video .video-block {
+    flex: 1 1 350px;
+    min-width: 320px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+}
+
+.double-video .video-wrapper {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    background: var(--white);
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.double-video .video-wrapper iframe,
+.double-video .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.double-video .video-wrapper.portrait-video {
+    padding-bottom: 150%;
+    /* Taller ratio for portrait video */
+}
+
+.double-video .video-description {
+    padding: 16px 18px 0 18px;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .double-video {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .double-video .video-block {
+        max-width: 100%;
+    }
+}
+
 /* CSS Variables for consistent theming */
 :root {
     --primary-green: #2d5a27;
@@ -17,8 +82,8 @@
 @font-face {
     font-family: 'Jameel Noori Nastaleeq';
     src: url('../fonts/JameelNooriNastaleeq.woff2') format('woff2'),
-         url('../fonts/JameelNooriNastaleeq.woff') format('woff'),
-         url('../fonts/JameelNooriNastaleeq.ttf') format('truetype');
+        url('../fonts/JameelNooriNastaleeq.woff') format('woff'),
+        url('../fonts/JameelNooriNastaleeq.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -90,7 +155,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     line-height: 1.3;
@@ -99,7 +167,7 @@ h1, h2, h3, h4 {
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -115,8 +183,13 @@ header {
 }
 
 @keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 .header-container {
@@ -235,8 +308,8 @@ body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(45, 90, 39, 0.7), rgba(62, 124, 58, 0.6)), 
-                 url('../assets/home/background.png');
+    background: linear-gradient(rgba(45, 90, 39, 0.7), rgba(62, 124, 58, 0.6)),
+        url('../assets/home/background.png');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -264,6 +337,7 @@ body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -327,6 +401,7 @@ body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
         transform: translateY(0) rotate(0deg);
         opacity: 0.7;
     }
+
     100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
@@ -424,7 +499,7 @@ body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     transform: translateX(-100%);
 }
 
@@ -536,7 +611,8 @@ body:has(.logo-text h1.urdu-text) .mobile-menu-btn {
     margin-bottom: 40px;
 }
 
-.bmi-input-card, .bmi-result-card {
+.bmi-input-card,
+.bmi-result-card {
     padding: 30px;
     border-radius: 15px;
     background: var(--light-green);
@@ -730,15 +806,15 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
 
 .scale-bar {
     height: 20px;
-    background: linear-gradient(90deg, 
-        #3498db 0%, 
-        #3498db 20%, 
-        #2ecc71 20%, 
-        #2ecc71 50%, 
-        #f39c12 50%, 
-        #f39c12 80%, 
-        #e74c3c 80%, 
-        #e74c3c 100%);
+    background: linear-gradient(90deg,
+            #3498db 0%,
+            #3498db 20%,
+            #2ecc71 20%,
+            #2ecc71 50%,
+            #f39c12 50%,
+            #f39c12 80%,
+            #e74c3c 80%,
+            #e74c3c 100%);
     border-radius: 10px;
     position: relative;
     margin: 10px 0;
@@ -813,10 +889,21 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
     border-radius: 4px;
 }
 
-.category-color.underweight { background: #3498db; }
-.category-color.normal { background: #2ecc71; }
-.category-color.overweight { background: #f39c12; }
-.category-color.obese { background: #e74c3c; }
+.category-color.underweight {
+    background: #3498db;
+}
+
+.category-color.normal {
+    background: #2ecc71;
+}
+
+.category-color.overweight {
+    background: #f39c12;
+}
+
+.category-color.obese {
+    background: #e74c3c;
+}
 
 .health-tip {
     display: flex;
@@ -834,12 +921,12 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
     .bmi-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .bmi-circle {
         width: 120px;
         height: 120px;
     }
-    
+
     .bmi-value {
         font-size: 2.5rem;
     }
@@ -849,11 +936,12 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
     .bmi-container {
         padding: 20px;
     }
-    
-    .bmi-input-card, .bmi-result-card {
+
+    .bmi-input-card,
+    .bmi-result-card {
         padding: 20px;
     }
-    
+
     .bmi-categories {
         grid-template-columns: 1fr;
     }
@@ -874,10 +962,10 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
     left: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, 
-        var(--primary-green) 0%,
-        var(--accent-gold) 50%,
-        var(--primary-green) 100%);
+    background: linear-gradient(90deg,
+            var(--primary-green) 0%,
+            var(--accent-gold) 50%,
+            var(--primary-green) 100%);
 }
 
 .video-container {
@@ -891,7 +979,8 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
     height: 0;
     background: var(--primary-green);
 }
@@ -943,7 +1032,7 @@ body:has(.language-toggle .lang-btn.active:nth-child(2)) .detail-item {
 
 .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .feature-item i {
@@ -975,11 +1064,11 @@ body:has(.lang-btn.active:nth-child(2)) .feature-item {
     .video-container {
         margin: 0 15px;
     }
-    
+
     .video-description {
         padding: 20px;
     }
-    
+
     .video-features {
         grid-template-columns: 1fr;
     }
@@ -989,7 +1078,7 @@ body:has(.lang-btn.active:nth-child(2)) .feature-item {
     .video-section {
         padding: 60px 0;
     }
-    
+
     .video-description h3 {
         font-size: 1.5rem;
     }
@@ -1010,10 +1099,10 @@ body:has(.lang-btn.active:nth-child(2)) .feature-item {
     left: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, 
-        var(--primary-green) 0%,
-        var(--accent-gold) 50%,
-        var(--primary-green) 100%);
+    background: linear-gradient(90deg,
+            var(--primary-green) 0%,
+            var(--accent-gold) 50%,
+            var(--primary-green) 100%);
 }
 
 .islamic-content {
@@ -1030,8 +1119,15 @@ body:has(.lang-btn.active:nth-child(2)) .feature-item {
 }
 
 @keyframes gentlePulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .arabic-hadith {
@@ -1142,23 +1238,23 @@ body:has(.lang-btn.active:nth-child(2)) .feature-item {
     .arabic-hadith {
         padding: 20px;
     }
-    
+
     .arabic-text {
         font-size: 1.6rem;
     }
-    
+
     .hadith {
         padding: 20px;
     }
-    
+
     .hadith-text {
         font-size: 1.2rem;
     }
-    
+
     .urdu-hadith .hadith-text {
         font-size: 1.3rem;
     }
-    
+
     .wisdom-message .urdu-text {
         font-size: 1.1rem;
     }
@@ -1168,11 +1264,11 @@ body:has(.lang-btn.active:nth-child(2)) .feature-item {
     .arabic-text {
         font-size: 1.4rem;
     }
-    
+
     .urdu-hadith .hadith-text {
         font-size: 1.1rem;
     }
-    
+
     .hadith::before {
         right: 15px;
     }
@@ -1200,9 +1296,17 @@ body:has(.lang-btn.active:nth-child(2)) .feature-item {
 }
 
 @keyframes pulse-green {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 .whatsapp-float:hover {
@@ -1276,7 +1380,7 @@ footer {
     .hero h2 {
         font-size: 2.5rem;
     }
-    
+
     .products-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
@@ -1290,7 +1394,7 @@ footer {
         position: relative;
         padding: 15px 0;
     }
-    
+
     nav ul {
         display: none;
         position: absolute;
@@ -1310,25 +1414,25 @@ footer {
         flex-direction: column;
         gap: 0;
     }
-    
+
     nav ul li {
         width: 100%;
         text-align: left;
         padding: 0;
     }
-    
+
     nav ul li a {
         display: block;
         padding: 15px 20px;
         font-size: 1rem;
         transition: all 0.3s ease;
     }
-    
+
     nav ul li a:hover {
         background-color: var(--light-green);
         color: var(--primary-green);
     }
-    
+
     nav ul li a::after {
         display: none;
     }
@@ -1338,40 +1442,43 @@ footer {
         direction: rtl;
         text-align: right;
     }
+
     body:has(.logo-text h1.urdu-text) nav ul li {
         text-align: right;
     }
+
     body:has(.logo-text h1.urdu-text) nav ul li a {
         padding-left: 15px;
         padding-right: 20px;
     }
+
     body:has(.logo-text h1.urdu-text) nav ul li a:hover {
         padding-right: 30px;
         padding-left: 15px;
     }
-    
+
     .mobile-menu-btn {
         display: block;
         margin-right: -15%;
     }
-    
+
     .mobile-menu-btn i {
         transition: transform 0.3s ease;
     }
-    
+
     .mobile-menu-btn.active i {
         transform: rotate(90deg);
     }
-    
+
     .hero {
         padding: 150px 20px 80px;
         margin-top: 70px;
     }
-    
+
     .hero h2 {
         font-size: 2rem;
     }
-    
+
     .section-title h2 {
         font-size: 2rem;
     }
@@ -1386,24 +1493,24 @@ footer {
     .logo-text h1 {
         font-size: 1.5rem;
     }
-    
+
     .hero {
         padding: 120px 15px 60px;
     }
-    
+
     .hero h2 {
         font-size: 1.8rem;
     }
-    
+
     .cta-button {
         padding: 14px 30px;
         font-size: 1rem;
     }
-    
+
     .product-card {
         max-width: 100%;
     }
-    
+
     .whatsapp-float {
         width: 55px;
         height: 55px;
